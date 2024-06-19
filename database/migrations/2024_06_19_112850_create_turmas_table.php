@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('turmas', function (Blueprint $table) {
             $table->id('turma_id')->primary()->unique();
             $table->string('turma_nome');
+            $table->unsignedBigInteger('professor_id');
+            $table->unsignedBigInteger('aluno_id');
+            $table->unsignedBigInteger('curso_id');
+            $table->unsignedBigInteger('disciplina_id');
             $table->timestamps();
 
             $table->foreign('professor_id')
