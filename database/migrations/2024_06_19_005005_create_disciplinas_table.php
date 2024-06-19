@@ -1,0 +1,33 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('disciplinas', function (Blueprint $table) {
+            $table->id('disciplina_id')->primary()->unique();
+            $table->string('disciplina_nome');
+            $table->integer('disciplina_carga_horaria');
+            $table->timestamps();
+
+            $table->foreign('usuario_id')
+                ->references('usuario_id')
+                ->on('usuarios');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('disciplinas');
+    }
+};
