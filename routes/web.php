@@ -8,7 +8,7 @@ use App\Http\Controllers\CadastroAlunoController;
 use App\Http\Controllers\CadastroSalaController;
 use App\Http\Controllers\CadastroDisciplinaController;
 
-use App\Http\Controllers\VisualizarAtividadesController;
+use App\Http\Controllers\VisualizarAtividadeController;
 use App\Http\Controllers\VisualizarTurmaController;
 use App\Http\Controllers\VisualizarProfessorController;
 use App\Http\Controllers\VisualizarAlunoController;

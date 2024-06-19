@@ -19,7 +19,7 @@ class CadastroProfessorController extends Controller
      */
     public function create()
     {
-        return view('TelaCadastroProfessor');
+        return view('telaCadastroProfessor');
     }
 
     /**

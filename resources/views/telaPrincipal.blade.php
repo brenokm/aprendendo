@@ -66,34 +66,34 @@
         </div>
         <div class="row">
             <div class="col-md-2">
-                <button class="btn btn-secondary btn-block" data-toggle="tooltip" data-placement="bottom" title="Visualizar Turma">
+                <a href="{{route('VisualizarTurma')}}" class="btn btn-secondary btn-block"  title="Visualizar Turma">
                     <i class="fas fa-eye"></i> Turma
-                </button>
+</a>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-secondary btn-block" data-toggle="tooltip" data-placement="bottom" title="Visualizar Atividade">
+                <a href="{{route('VisualizarAtividade')}}" class="btn btn-secondary btn-block" title="Visualizar Atividade">
                     <i class="fas fa-eye"></i> Atividade
-                </button>
+</a>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-secondary btn-block" data-toggle="tooltip" data-placement="bottom" title="Visualizar Aluno">
+                <a href="{{route('VisualizarAluno')}}" class="btn btn-secondary btn-block"  title="Visualizar Aluno">
                     <i class="fas fa-eye"></i> Aluno
-                </button>
+</a>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-secondary btn-block" data-toggle="tooltip" data-placement="bottom" title="Visualizar Sala">
+                <a href="{{route('VisualizarSala')}}" class="btn btn-secondary btn-block"  title="Visualizar Sala">
                     <i class="fas fa-eye"></i> Sala
-                </button>
+</a>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-secondary btn-block" data-toggle="tooltip" data-placement="bottom" title="Visualizar Disciplina">
+                <a href="{{route('VisualizarDisciplina')}}" class="btn btn-secondary btn-block"  title="Visualizar Disciplina">
                     <i class="fas fa-eye"></i> Disciplina
-                </button>
+</a>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-secondary btn-block" data-toggle="tooltip" data-placement="bottom" title="Visualizar Professor">
+                <a href="{{route('VisualizarProfessor')}}" class="btn btn-secondary btn-block"  title="Visualizar Professor">
                     <i class="fas fa-eye"></i> Professor
-                </button>
+</a>
             </div>
         </div>
     </div>
