@@ -25,34 +25,33 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2>Cadastro de Turma</h2>
-          </div>
-        </div>
-        <form>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="login">nome:</label>
-                <input type="text" class="form-control" id="nometurma" placeholder="Insira seu login">
+
+    <table class="table-auto w-full border-collapse mt-4">
+
+<table class="table-auto w-full border-collapse">
+        <thead>
+
+            <th class="px-4 py-2 text-left">Nome</th>
+            <th class="px-4 py-2 text-left">Numero</th>
+           
+            <th>Ação</th>
+            
+
+        </thead>
+        <tbody>
+           
+                    <tr class="border-b hover:bg-teal-100">
+                        
+                            <td class="text-left px-4 py-2">aaaa</td>
+                            <td class="text-left px-4 py-2">aaaa</td>
+                            <td class="flex">
+                            <a href="" class="btn btn-danger">Entrada</a>
+                            <a href="" class="btn btn-primary">Saída</a>
+                    </tr>
                 
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="nome">numero:</label>
-                <input type="text" class="form-control" id="numeroturma" placeholder="Insira seu nome">
-              </div>
-            </div>
-          </div>        
-          <div class="row">
-            <div class="col-md-12">
-              <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
-            </div>
-          </div>
-        </form>
-      </div>
+                </tr>
+           
+        </tbody>
+    </table>
 </body>
 </html>

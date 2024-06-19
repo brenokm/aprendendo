@@ -25,48 +25,43 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2>Cadastro de Professor</h2>
-          </div>
-        </div>
-        <form>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nomeprofessor" placeholder="Insira seu nome">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="login">Login:</label>
-                <input type="text" class="form-control" id="loginprofessor" placeholder="Insira seu login">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="senha">Senha:</label>
-                <input type="password" class="form-control" id="senhaprofessor" placeholder="Insira sua senha">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="confirmar-senha">Confirmar Senha:</label>
-                <input type="password" class="form-control" id="confirmarsenhaprofessor" placeholder="Confirme sua senha">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
-            </div>
-          </div>
-        </form>
-      </div>
+
+    <table class="table-auto w-full border-collapse mt-4">
+
+<table class="table-auto w-full border-collapse">
+        <thead>
+
+            <th class="px-4 py-2 text-left">Nome</th>
+            <th class="px-4 py-2 text-left">Login</th>
+            <th class="px-4 py-2 text-left">Senha</th>
+            <th>Ação</th>
+            
+
+        </thead>
+        <tbody>
+           
+                    <tr class="border-b hover:bg-teal-100">
+                        
+                            <td class="text-left px-4 py-2">aaaa</td>
+                            <td class="text-left px-4 py-2">aaaa</td>
+                            <td class="text-left px-4 py-2">aaaa</td>
+                            <td class="flex">
+                            <a href="" class="btn btn-danger">Entrada</a>
+                            <a href="" class="btn btn-primary">Saída</a>
+                    </tr>
+                
+                </tr>
+           
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+  
     
 </body>
 </html>
