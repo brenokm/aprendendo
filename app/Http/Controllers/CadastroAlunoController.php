@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Aluno;
+use App\Models\Usuario;
 
 class CadastroAlunoController extends Controller
 {
@@ -27,15 +29,26 @@ class CadastroAlunoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $usuario = new Usuario();
+        $usuario->usuario_nome =  $request->input('loginaluno');
+        $usuario->usuario_senha=  $request->input('senhaaluno');
+        $usuario->save();
+
+        $idusuario = $usuario->usuario_id;
+
+        $aluno = new Aluno();
+        $aluno->usuario_id =$idusuario; 
+        $aluno->aluno_nome = $request->input('nomealuno');
+        $aluno->save();
+
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+       return view('TelaVisualizarAluno'); 
     }
 
     /**

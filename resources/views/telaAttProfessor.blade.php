@@ -29,7 +29,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>Cadastro de Professor</h2>
+          <h2>atualizar de Professor</h2>
         </div>
       </div>
       <form>

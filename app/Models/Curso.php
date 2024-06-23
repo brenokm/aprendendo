@@ -13,4 +13,8 @@ class Curso extends Model
     protected $primaryKey = 'curso_id';
 
     protected $fillable=[  'curso_nome'];
+
+    public function turmas(){
+        return $this->hasMany(Turma::class, 'curso_id', 'curso_id');
+    }
 }

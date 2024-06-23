@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Curso;
-use App\Models\Sala;
 use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Redirect;
 
-class CadastroSalaController extends Controller
+class CadastroCursoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,7 +22,7 @@ class CadastroSalaController extends Controller
      */
     public function create()
     {
-        return view('telaCadastroSala');
+        return view('telaCadastroCurso');
     }
 
     /**
@@ -30,11 +30,15 @@ class CadastroSalaController extends Controller
      */
     public function store(Request $request)
     {
-        $sala = new Sala();
-        $sala->sala_nome = $request->input('nomesala');
-        $sala->save();
+        
+        $curso = new Curso();
+        $curso->curso_nome = $request->input('nomecurso');
+        $curso->save();
 
-        return redirect('telaVisualizarSala');
+        return redirect('telaCadastroCurso');
+
+    
+
     }
 
     /**
@@ -42,27 +46,35 @@ class CadastroSalaController extends Controller
      */
     public function show()
     {
-        return view('telaVisualizarSala');
+        $cursos = Curso::all();
+        return view('TelaVisualizarCurso', ['cursos' => $cursos]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Request $request)
     {
-        //
+
+
+        $cursos = Curso::find($request->curso_id);
+
+        return view('TelaAttCurso', [
+            'cursos'=>$cursos
+       
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Sala $salas)
+    public function update(Request $request, Curso $cursos)
     {
-        $salas= Sala::find($request->sala_id);
-        $salas->sala_nome =$request->nomesala;
-        $salas->save();
+        $cursos= Curso::find($request->curso_id);
+        $cursos->curso_nome =$request->nomecurso;
+        $cursos->save();
 
-        return Redirect::route('');
+        return redirect('visualizarCurso');
     }
 
     /**
@@ -70,9 +82,9 @@ class CadastroSalaController extends Controller
      */
     public function destroy(string $id)
     {
-        $curso = Sala::findOrFail($id);
+        $curso = Curso::findOrFail($id);
         $curso->delete();
 
-        return Redirect::route('');
+        return Redirect::route('visualizarCurso');
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Disciplina;
 
 class CadastroDisciplinaController extends Controller
 {
@@ -27,15 +28,23 @@ class CadastroDisciplinaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+        $disciplina = new Disciplina();
+
+        $disciplina->disciplina_nome = $request->input('nomedisciplina');
+        $disciplina->disciplina_carga_horaria = $request->input('cargadisciplina');
+        $disciplina->save();
+
+        return redirect('telaCadastroDisciplina');
+ 
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        return view('TelaVisualizarDisciplina');
     }
 
     /**

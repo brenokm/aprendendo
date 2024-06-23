@@ -15,13 +15,12 @@ class Atividade extends Model
 
     protected $fillable=[  
         'turma_id',
-          'atividade_nome'
+          'atividade_nome',
+          'atividade_descricao'
+
     ];
 
     public function turmas(){
         return $this->belongsTo(Turma::class, 'turma_id','turma_id');
-    }
-    public function atividade(){
-        return $this->hasMany(Atividade::class, 'atividade_id','atividade');
     }
 }

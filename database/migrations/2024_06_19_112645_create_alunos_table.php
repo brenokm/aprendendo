@@ -13,10 +13,14 @@ return new class extends Migration
     {
         Schema::create('alunos', function (Blueprint $table) {
             $table->id('aluno_id')->primary()->unique();
-            $table->string('login');
-            $table->string('senha');
-
+            $table->string('aluno_nome');
+            $table->unsignedBigInteger('usuario_id');
             $table->timestamps();
+
+            $table->foreign('usuario_id')
+            ->references('usuario_id')
+            ->on('usuarios');
+           
         });
     }
 

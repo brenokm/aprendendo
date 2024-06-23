@@ -16,24 +16,24 @@ class Turma extends Model
             'professor_id',
             'aluno_id',
             'curso_id',
-            'disciplina_id'
+            'sala_id'
     ];
 
     public function professores(){
-     return $this->belongsTo(Professor::class,'professor_id','professor_id');
+      return $this->belongsTo(Professor::class,'professor_id','professor_id');
     }
     public function alunos(){
-        return $this->belongsTo(Aluno::class, 'aluno_id','aluno_id');
+        return $this->belongsTo(Aluno::class,'aluno_id','aluno_id');
     }
 
     public function cursos(){
-        return $this->belongsTo(Curso::class, 'curso_id','curso_id');
+        return $this->  belongsTo(Curso::class,'curso_id','curso_id');
     }    
-    public function disciplinas(){
-        return $this->belongsTo(Disciplina::class, 'disciplina_id','disciplina_id');
+    public function salas(){
+        return $this-> belongsTo(Sala::class,'sala_id','sala_id');
     }
     public function atividades(){
-        return $this->hasMany(Aluno::class, 'turma_id', 'turma_id');
+        return $this->hasMany(Atividade::class , 'atividade_id','atividade_id');
      }
     
 }

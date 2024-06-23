@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Turma;
 
 use Illuminate\Http\Request;
 
@@ -9,7 +10,7 @@ class CadastroTurmaController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index()  
     {
        
 
@@ -28,15 +29,17 @@ class CadastroTurmaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $turma = new Turma(); 
+        
+       
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        return view('telaVisualizarTurma');
     }
 
     /**

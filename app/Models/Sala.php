@@ -15,7 +15,7 @@ class Sala extends Model
     protected $fillable=[  'sala_nome'];
    
      public function turmas(){
-        return $this->hasMany(Aluno::class, 'sala_id', 'sala_id');
+        return $this->hasMany(Turma::class, 'sala_id', 'sala_id');
      }
    
 }

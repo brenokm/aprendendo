@@ -12,8 +12,9 @@
 
 <body>
 
-    <form action="{{route('criar.sala')}}" method="POST">
+    <form action="{{route('atualizar.sala')}}" method="POST">
         @csrf
+        <input type="hidden" name="sala_id" value="{{ $salas->sala_id}}">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <p class="navbar-brand" href="#">Nome do usuario</p>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Cadastro de Sala</h2>
+                    <h2>atualizar de Sala</h2>
                 </div>
             </div>
 
@@ -41,14 +42,14 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="login">nome:</label>
-                            <input type="text" class="form-control" id="nomesala" name="nomesala" placeholder="Insira seu login">
+                            <label for="login">Nome:</label>
+                            <input type="text" class="form-control" id="nomesala" name="nomesala" placeholder="Insira seu login" value="{{$salas->sala_nome}}">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+                        <button type="submit" class="btn btn-primary btn-block">Atualizar</button>
                     </div>
                 </div>
             </form>

@@ -26,41 +26,45 @@
         </div>
     </nav>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Cadastro de Atividade</h2>
-        </div>
-      </div>
-      <form>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="nome">Nome:</label>
-              <input type="text" class="form-control" id="nomeatividade" placeholder="Insira o nome">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="turma">Turma:</label>
-              <select class="form-control" id="turma">
-                <option value="">Selecione uma turma</option>
-                <option value="Turma 1">Turma 1</option>
-                <option value="Turma 2">Turma 2</option>
-                <option value="Turma 3">Turma 3</option>
-                <!-- Add more options here -->
-              </select>
-            </div>
-          </div>
-        </div>
+
+    <form action="{{route('criar.atividade')}}">
+      @csrf
+      <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+            <h2>Cadastro de Atividade</h2>
           </div>
         </div>
-      </form>
-    </div>
-    
-
-</body>
-</html>
+        <form>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nomeatividade" placeholder="Insira o nome">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="turma">Turma:</label>
+                <select class="form-control" id="turma">
+                  <option value="">Selecione uma turma</option>
+                  <option value="Turma 1">Turma 1</option>
+                  <option value="Turma 2">Turma 2</option>
+                  <option value="Turma 3">Turma 3</option>
+                  <!-- Add more options here -->
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+      
+    </form>
+    </body>
+    </html>

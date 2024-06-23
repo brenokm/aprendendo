@@ -24,25 +24,27 @@
             </ul>
         </div>
     </nav>
-    
-    <div class="container">
+    <form action="{{route('criar.aluno')}} " method="POST">
+      @csrf
+
+
+      <div class="container">
         <div class="row">
           <div class="col-md-12">
             <h2>Cadastro de Aluno</h2>
           </div>
         </div>
-        <form>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nomealuno" placeholder="Insira seu nome">
+                <input type="text" class="form-control" id="nomealuno" name="nomealuno" placeholder="Insira seu nome">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label for="login">Login:</label>
-                <input type="text" class="form-control" id="loginaluno" placeholder="Insira seu login">
+                <input type="text" class="form-control" id="loginaluno" name="loginaluno" placeholder="Insira seu login">
               </div>
             </div>
           </div>
@@ -50,13 +52,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="senha">Senha:</label>
-                <input type="password" class="form-control" id="senhaaluno" placeholder="Insira sua senha">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="confirmar-senha">Confirmar Senha:</label>
-                <input type="password" class="form-control" id="confirmarsenhaaluno" placeholder="Confirme sua senha">
+                <input type="password" class="form-control" id="senhaaluno" name="senhaaluno" placeholder="Insira sua senha">
               </div>
             </div>
           </div>
@@ -64,8 +60,10 @@
             <div class="col-md-12">
               <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
             </div>
-          </div>
-        </form>
+          </div> 
       </div>
-</body>
-</html>
+
+      
+    </form>
+    </body>
+    </html>

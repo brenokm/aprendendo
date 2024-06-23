@@ -15,12 +15,13 @@ return new class extends Migration
             $table->id('atividade_id')->primary()->unique();
             $table->unsignedBigInteger('turma_id');
             $table->string('atividade_nome');
+            $table->string('atividade_descricao');
             $table->timestamps();
 
             $table->foreign('turma_id')
                 ->references('turma_id')
                 ->on('turmas');
-        });
+        }); 
     }
 
     /**

@@ -25,4 +25,5 @@ class Usuario extends Model
      public function professores(){
         return $this->hasMany(Professor::class, 'usuario_id', 'usuario_id');
      }
+     
 }

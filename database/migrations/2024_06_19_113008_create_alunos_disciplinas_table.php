@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('alunos_disciplinas', function (Blueprint $table) {
             $table->id('aluno_disciplina_id')->primary()->unique();
+            $table->double('disciplina_nota');
             $table->unsignedBigInteger('disciplina_id');
             $table->unsignedBigInteger('aluno_id');
             $table->timestamps();

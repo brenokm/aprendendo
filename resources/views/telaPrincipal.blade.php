@@ -24,76 +24,66 @@
         </div>
     </nav>
 
-
-    <div class="container">
+    <div class="container text-center">
         <div class="row">
             <div class="col-md-12">
                 <h2>Cadastro</h2>
             </div>
         </div>
+    
         <div class="row">
-            <div class="col-md-2">
-                <a href="{{route('CadastroTurma')}}" class="btn btn-primary btn-block" title="Cadastro de Turma">
-                    <i class="fas fa-users"></i> Cadastar Turma
-                </a>
+            <div class="col-md-12">
+                <div class="btn-group btn-group-lg justify-content-center">
+                    <a href="{{route('CadastroTurma')}}" class="btn btn-primary" title="Cadastro de Turma">
+                        <i class="fas fa-users"></i> Cadastar Turma
+                    </a>
+                    <a href="{{route('CadastroAtividade')}}" class="btn btn-primary" title="Cadastro de Atividade">
+                        <i class="fas fa-clipboard-list"></i>Cadastar Atividade
+                    </a>
+                    <a href="{{route('CadastroAluno')}}" class="btn btn-primary" title="Cadastro de Aluno">
+                        <i class="fas fa-user-graduate"></i>Cadastar Aluno
+                    </a>
+                    <a href="{{route('CadastroCurso')}}" class="btn btn-primary" title="Cadastro de Aluno">
+                        <i class="fas fa-user-graduate"></i>Cadastar Cursos
+                    </a>
+                    <a href="{{route('CadastroSala')}}" class="btn btn-primary" title="Cadastro de Sala">
+                        <i class="fas fa-door-open"></i>Cadastar Sala
+                    </a>
+                    <a href="{{route('CadastroDisciplina')}}" class="btn btn-primary" title="Cadastro de Disciplina">
+                        <i class="fas fa-door-open"></i>Cadastar Disciplina
+                    </a>
+                    <a href="{{route('CadastroProfessor')}}" class="btn btn-primary" title="Cadastro de Professor">
+                        <i class="fas fa-door-open"></i>Cadastar Professor
+                    </a>
+                </div>
             </div>
-            <div class="col-md-2">
-                <a href="{{route('CadastroAtividade')}}" class="btn btn-primary btn-block" title="Cadastro de Atividade">
-                    <i class="fas fa-clipboard-list"></i>Cadastar Atividade
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a href="{{route('CadastroAluno')}}" class="btn btn-primary btn-block"  title="Cadastro de Aluno">
-                    <i class="fas fa-user-graduate"></i>Cadastar Aluno
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a href="{{route('CadastroSala')}}" class="btn btn-primary btn-block" title="Cadastro de Sala">
-                    <i class="fas fa-door-open"></i>Cadastar Sala
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a href="{{route('CadastroDisciplina')}}" class="btn btn-primary btn-block" title="Cadastro de Disciplina">
-                    <i class="fas fa-door-open"></i>Cadastar Disciplina
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a href="{{route('CadastroProfessor')}}" class="btn btn-primary btn-block"  title="Cadastro de Professor">
-                    <i class="fas fa-door-open"></i>Cadastar Professor
-                </a>
-            </div>
-            
         </div>
+    
         <div class="row">
-            <div class="col-md-2">
-                <a href="{{route('VisualizarTurma')}}" class="btn btn-secondary btn-block"  title="Visualizar Turma">
-                    <i class="fas fa-eye"></i> Turma
-</a>
-            </div>
-            <div class="col-md-2">
-                <a href="{{route('VisualizarAtividade')}}" class="btn btn-secondary btn-block" title="Visualizar Atividade">
-                    <i class="fas fa-eye"></i> Atividade
-</a>
-            </div>
-            <div class="col-md-2">
-                <a href="{{route('VisualizarAluno')}}" class="btn btn-secondary btn-block"  title="Visualizar Aluno">
-                    <i class="fas fa-eye"></i> Aluno
-</a>
-            </div>
-            <div class="col-md-2">
-                <a href="{{route('VisualizarSala')}}" class="btn btn-secondary btn-block"  title="Visualizar Sala">
-                    <i class="fas fa-eye"></i> Sala
-</a>
-            </div>
-            <div class="col-md-2">
-                <a href="{{route('VisualizarDisciplina')}}" class="btn btn-secondary btn-block"  title="Visualizar Disciplina">
-                    <i class="fas fa-eye"></i> Disciplina
-</a>
-            </div>
-            <div class="col-md-2">
-                <a href="{{route('VisualizarProfessor')}}" class="btn btn-secondary btn-block"  title="Visualizar Professor">
-                    <i class="fas fa-eye"></i> Professor
-</a>
+            <div class="col-md-12">
+                <div class="btn-group btn-group-lg justify-content-center">
+                    <a href="{{route('visualizar.turma')}}" class="btn btn-secondary" title="Visualizar Turma">
+                        <i class="fas fa-eye"></i> Turma
+                    </a>
+                    <a href="{{route('visualizar.atividade')}}" class="btn btn-secondary" title="Visualizar Atividade">
+                        <i class="fas fa-eye"></i> Atividade
+                    </a>
+                    <a href="{{route('visualizar.aluno')}}" class="btn btn-secondary" title="Visualizar Aluno">
+                        <i class="fas fa-eye"></i> Aluno
+                    </a>
+                    <a href="{{route('visualizar.curso')}}" class="btn btn-secondary" title="Visualizar Curso">
+                        <i class="fas fa-eye"></i> Curso
+                    </a>
+                    <a href="{{route('visualizar.sala' )}}" class="btn btn-secondary" title="Visualizar Sala">
+                        <i class="fas fa-eye"></i> Sala
+                    </a>
+                    <a href="{{route('visualizar.disciplina')}}" class="btn btn-secondary" title="Visualizar Disciplina">
+                        <i class="fas fa-eye"></i> Disciplina
+                    </a>
+                    <a href="{{route('visualizar.professor')}}" class="btn btn-secondary" title="Visualizar Professor">
+                        <i class="fas fa-eye"></i> Professor
+                    </a>
+                </div>
             </div>
         </div>
     </div>

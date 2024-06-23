@@ -13,13 +13,12 @@ class Disciplina extends Model
     protected $primaryKey = 'disciplina_id';
 
 
-    protected $fillable=[  'usuario_id',
+    protected $fillable=[  
     'disciplina_nome',
    'disciplina_carga_horaria'];
 
-   public function usuarios(){
-    return $this->belongsTo(Usuario::class, 'usuario_id','usuario_id');
-   }
+   
+   
 
    
 }

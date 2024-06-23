@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('professor_id');
             $table->unsignedBigInteger('aluno_id');
             $table->unsignedBigInteger('curso_id');
-            $table->unsignedBigInteger('disciplina_id');
+            $table->unsignedBigInteger('sala_id');
             $table->timestamps();
 
             $table->foreign('professor_id')
@@ -32,9 +32,9 @@ return new class extends Migration
                 ->references('curso_id')
                 ->on('cursos');
 
-                $table->foreign('disciplina_id')
-                ->references('disciplina_id')
-                ->on('disciplinas');
+                $table->foreign('sala_id')
+                ->references('sala_id')
+                ->on('salas');
         });
     }
 

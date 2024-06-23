@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Aluno_Disciplina;
 
 class Aluno extends Model
 {
@@ -14,14 +15,21 @@ class Aluno extends Model
 
     protected $fillable=[  
     
-        'login',
-        'senha'
+        'aluno_nome',
+        'usuario_id'
+        
     ];
 
-    public function usuarios(){
-        return $this->belongsTo(Usuario::class, 'usuario_id','usuario_id');
-    }
-    public function disciplinas(){
-        return $this->belongsTo(Disciplina::class,'disciplina_id','disciplina_id');
-}
+ 
+  public function aluno_disciplina(){  
+    return $this->hasMany(Aluno_Disciplina::class, 'aluno_id', 'aluno_id');
+  }
+
+  public function usuario(){
+    return $this->belongsTo(Usuario::class,'usuario_id','usuario_id');
+  }
+  
+  public function turmas(){
+    return $this->hasMany(Turma::class, 'aluno_id', 'aluno_id');
+  }
 }
