@@ -31,20 +31,20 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2>Cadastro de Aluno</h2>
+            <h2>Cadastro de Criança</h2>
           </div>
         </div>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <label for="aluno_nome">Nome:</label>
-                <input type="text" class="form-control" id="aluno_nome" name="aluno_nome" placeholder="Insira seu nome">
+                <input type="text" class="form-control" id="aluno_nome" name="aluno_nome" placeholder="Insira o nome da crianca">
               </div>
             </div>
             <div class="form-group">
               <label for="turma_id">turma:</label>
               <select class="form-control" id="turma_id" name="turma_id" required>
-                  <option value="">Selecione uma turma</option>
+                  <option value="">Selecione a turma da crianca</option>
                   @foreach($turmas as $turma)
                       <option value="{{ $turma->turma_id }}">{{ $turma->turma_nome }}</option>
                   @endforeach
@@ -53,7 +53,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="login">Login:</label>
-                <input type="text" class="form-control" id="loginaluno" name="loginaluno" placeholder="Insira seu login">
+                <input type="text" class="form-control" id="loginaluno" name="loginaluno" placeholder="Insira o login do responsavel">
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="senha">Senha:</label>
-                <input type="password" class="form-control" id="senhaaluno" name="senhaaluno" placeholder="Insira sua senha">
+                <input type="password" class="form-control" id="senhaaluno" name="senhaaluno" placeholder="Insira a senha do responsavel">
               </div>
             </div>
           </div>

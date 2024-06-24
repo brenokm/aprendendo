@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lista de Professores</title>
+    <title>Lista de funcionarios</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- Font Awesome for icons -->
@@ -53,7 +53,7 @@
     </nav>
 
     <div class="container mt-4">
-        <h1 class="mb-4">Lista de Professores</h1>
+        <h1 class="mb-4">Lista de Funcionarios</h1>
         <table class="table table-bordered table-auto">
             <thead class="thead-light">
                 <tr>

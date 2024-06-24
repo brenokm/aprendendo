@@ -53,7 +53,7 @@
                         <i class="fas fa-door-open"></i>Cadastar Disciplina
                     </a>
                     <a href="{{route('cadastro.professor')}}" class="btn btn-primary" title="Cadastro de Professor">
-                        <i class="fas fa-door-open"></i>Cadastar Professor
+                        <i class="fas fa-door-open"></i>Cadastar Funcionario
                     </a>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                         <i class="fas fa-eye"></i> Disciplina
                     </a>
                     <a href="{{route('visualizar.professor')}}" class="btn btn-secondary" title="Visualizar Professor">
-                        <i class="fas fa-eye"></i> Professor
+                        <i class="fas fa-eye"></i> Funcionario
                     </a>
                 </div>
             </div>
