@@ -1,7 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Curso;
 use App\Models\Turma;
+use App\Models\Sala;
+use App\Models\Disciplina;
+use App\Models\Professor;
 
 use Illuminate\Http\Request;
 
@@ -21,7 +26,13 @@ class CadastroTurmaController extends Controller
      */
     public function create()
     {
-        return view('telaCadastroTurma');
+        $disciplinas = Disciplina::all();
+        $professores = Professor::all();
+        $cursos=Curso::all();
+        $salas=Sala::all();
+        return view('telaCadastroTurma', ['disciplinas' => $disciplinas, 'professores' => $professores,
+        'cursos'=>$cursos, 'salas'=>$salas]);
+    
     }
 
     /**
@@ -30,8 +41,13 @@ class CadastroTurmaController extends Controller
     public function store(Request $request)
     {
         $turma = new Turma(); 
-        
-       
+        $turma->turma_nome=$request->input('nometurma');
+        $turma->professor_id=$request->professor_id;
+        $turma->curso_id=$request->curso_id;
+        $turma->sala_id=$request->sala_id;
+        $turma->save();
+
+        return redirect()->route('visualizar.turma');
     }
 
     /**

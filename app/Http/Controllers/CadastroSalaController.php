@@ -34,7 +34,7 @@ class CadastroSalaController extends Controller
         $sala->sala_nome = $request->input('nomesala');
         $sala->save();
 
-        return redirect('telaVisualizarSala');
+        return redirect()->route('visualizar.sala');
     }
 
     /**
@@ -42,15 +42,21 @@ class CadastroSalaController extends Controller
      */
     public function show()
     {
-        return view('telaVisualizarSala');
+        $salas = Sala::all();
+        return view('telaVisualizarSala',  ['salas' => $salas]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Request $request)
     {
-        //
+        $salas = Sala::find($request->sala_id);
+
+        return view('TelaAttSala', [
+            'salas'=>$salas
+       
+        ]);
     }
 
     /**
@@ -62,17 +68,17 @@ class CadastroSalaController extends Controller
         $salas->sala_nome =$request->nomesala;
         $salas->save();
 
-        return Redirect::route('');
+        return Redirect::route('visualizar.sala');
     }
 
-    /**
+    /** 
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        $curso = Sala::findOrFail($id);
-        $curso->delete();
+        $sala = Sala::findOrFail($id);
+        $sala->delete();
 
-        return Redirect::route('');
+        return Redirect::route('visualizar.sala');
     }
 }

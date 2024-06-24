@@ -12,25 +12,28 @@
 
 <body>
 
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <p class="navbar-brand" href="#">Nome do usuario</p>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Sair">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
     <form action="{{route('atualizar.sala')}}" method="POST">
+        @method('PUT')
         @csrf
         <input type="hidden" name="sala_id" value="{{ $salas->sala_id}}">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <p class="navbar-brand" href="#">Nome do usuario</p>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Sair">
-                            <i class="fas fa-sign-out-alt"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

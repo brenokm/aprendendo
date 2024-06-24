@@ -14,7 +14,6 @@ class Turma extends Model
     protected $fillable=[
        'turma_nome',
             'professor_id',
-            'aluno_id',
             'curso_id',
             'sala_id'
     ];
@@ -23,7 +22,7 @@ class Turma extends Model
       return $this->belongsTo(Professor::class,'professor_id','professor_id');
     }
     public function alunos(){
-        return $this->belongsTo(Aluno::class,'aluno_id','aluno_id');
+        return $this->hasMany(Aluno::class,'aluno_id','aluno_id');
     }
 
     public function cursos(){

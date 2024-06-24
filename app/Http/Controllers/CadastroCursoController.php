@@ -59,14 +59,11 @@ class CadastroCursoController extends Controller
 
         $cursos = Curso::find($request->curso_id);
 
-        return view('TelaAttCurso', [
-            'cursos'=>$cursos
-       
-        ]);
+        return view('TelaAttCurso', ['cursos'=>$cursos]);
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified resource in  storage.
      */
     public function update(Request $request, Curso $cursos)
     {
@@ -74,11 +71,11 @@ class CadastroCursoController extends Controller
         $cursos->curso_nome =$request->nomecurso;
         $cursos->save();
 
-        return redirect('visualizarCurso');
+        return redirect('visualizar.Curso');
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified  resource from storage.
      */
     public function destroy(string $id)
     {

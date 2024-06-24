@@ -37,10 +37,19 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nomealuno" name="nomealuno" placeholder="Insira seu nome">
+                <label for="aluno_nome">Nome:</label>
+                <input type="text" class="form-control" id="aluno_nome" name="aluno_nome" placeholder="Insira seu nome">
               </div>
             </div>
+            <div class="form-group">
+              <label for="turma_id">turma:</label>
+              <select class="form-control" id="turma_id" name="turma_id" required>
+                  <option value="">Selecione uma turma</option>
+                  @foreach($turmas as $turma)
+                      <option value="{{ $turma->turma_id }}">{{ $turma->turma_nome }}</option>
+                  @endforeach
+              </select>
+          </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label for="login">Login:</label>

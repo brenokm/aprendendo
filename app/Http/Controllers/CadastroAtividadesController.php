@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Turma;
+
+use App\Models\Atividade;
+use Illuminate\Support\Facades\Redirect;
 
 class CadastroAtividadesController extends Controller
 {
@@ -18,8 +22,10 @@ class CadastroAtividadesController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-    {
-        return view('telaCadastroAtividades');
+    {    $turmas = Turma::all();
+        
+        return view('telaCadastroAtividades', ['turmas' => $turmas]);
+        
     }
 
     /**
@@ -27,7 +33,15 @@ class CadastroAtividadesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $atividade = new Atividade();
+        $atividade->turma_id =$request->idturma; 
+        $atividade->atividade_nome = $request->input('nomeatividade');
+        $atividade->atividade_descricao = $request->input('descricaoatividade');
+        $atividade->save();
+
+
+        return redirect()->route('visualizar.atividade');
+        
     }
 
     /**
@@ -35,7 +49,10 @@ class CadastroAtividadesController extends Controller
      */
     public function show()
     {
-        return view('telaVisualizarAtividades');
+        $turmas=Turma::all();
+        $atividades = Atividade::all();
+        return view('telaVisualizarAtividades', ['turmas' => $turmas, 'atividades'=>$atividades]);
+        
     }
 
     /**
@@ -59,6 +76,9 @@ class CadastroAtividadesController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $atividades = Atividade::findOrFail($id);
+        $atividades->delete();
+
+        return Redirect::route('visualizar.professor');
     }
 }

@@ -26,9 +26,10 @@
     </div>
 </nav>
 
-<form action="{{route('criar.disciplina')}}" method="POST">
+<form action="{{route('atualizar.disciplina')}}" method="POST">
+  @method('PUT')
   @csrf
-
+ <input type="hidden" name="disciplina_id" value="{{$disciplinas->disciplina_id}}">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -40,13 +41,13 @@
         <div class="col-md-6">
           <div class="form-group">
             <label for="nome">Nome:</label>
-            <input type="text" class="form-control" id="nomedisciplina" name="nomedisciplina" placeholder="Insira seu nome">
+            <input type="text" class="form-control" id="nomedisciplina" name="nomedisciplina" placeholder="Insira o nome" value="{{$disciplinas->disciplina_nome}}">
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <label for="login">Carga Horaria:</label>
-            <input type="text" class="form-control"  id="cargadisciplina" name="cargadisciplina" placeholder="Insira seu login">
+            <label for="login">Carga Horaria</label>
+            <input type="text" class="form-control"  id="cargadisciplina" name="cargadisciplina" placeholder="Insira seu login" value="{{$disciplinas->disciplina_carga_horaria}}"> 
           </div>
         </div>
       </div>        

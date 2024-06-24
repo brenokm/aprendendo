@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Professor;
+use App\Models\Disciplina;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class CadastroProfessorController extends Controller
 {
@@ -19,7 +23,12 @@ class CadastroProfessorController extends Controller
      */
     public function create()
     {
-        return view('telaCadastroProfessor');
+
+        $disciplinas = Disciplina::all();
+        $professores = Professor::all();
+        
+        return view('telaCadastroProfessor', ['disciplinas' => $disciplinas, 'professores' => $professores]);
+   
     }
 
     /**
@@ -27,7 +36,20 @@ class CadastroProfessorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $usuario = new Usuario();
+        $usuario->usuario_nome =  $request->input('loginprofessor');
+        $usuario->usuario_senha=  $request->input('senhaprofessor');
+        $usuario->save();
+
+        $idusuario = $usuario->usuario_id;
+
+        $professor = new Professor();
+        $professor->usuario_id =$idusuario; 
+        $professor->disciplina_id =$request->disciplina_id; 
+        $professor->professor_nome = $request->input('professor_nome');
+        $professor->save();
+       
+        return redirect()->route('visualizar.professor');
     }
 
     /**
@@ -35,7 +57,9 @@ class CadastroProfessorController extends Controller
      */
     public function show()
     {
-        return view('TelaVisualizarProfessor');
+        $usuarios=Usuario::all();
+        $professores = Professor::all();
+        return view('TelaVisualizarProfessor', ['professores' => $professores, 'usuarios'=>$usuarios]);
     }
 
     /**
@@ -59,6 +83,9 @@ class CadastroProfessorController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $professor = Professor::findOrFail($id);
+        $professor->delete();
+
+        return Redirect::route('visualizar.professor');
     }
 }

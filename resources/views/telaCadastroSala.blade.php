@@ -42,7 +42,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="login">nome:</label>
-                            <input type="text" class="form-control" id="nomesala" name="nomesala" placeholder="Insira seu login">
+                            <input type="text" class="form-control" id="nomesala" name="nomesala" placeholder="Insira o nome da sala">
                         </div>
                     </div>
                 </div>

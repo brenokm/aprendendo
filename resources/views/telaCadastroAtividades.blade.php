@@ -27,7 +27,7 @@
     </nav>
 
 
-    <form action="{{route('criar.atividade')}}">
+    <form action="{{route('criar.atividade')}}" method="POST">
       @csrf
       <div class="container">
         <div class="row">
@@ -40,21 +40,26 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nomeatividade" placeholder="Insira o nome">
+                <input type="text" class="form-control" id="nomeatividade" name="nomeatividade" placeholder="Insira o nome">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label for="turma">Turma:</label>
-                <select class="form-control" id="turma">
-                  <option value="">Selecione uma turma</option>
-                  <option value="Turma 1">Turma 1</option>
-                  <option value="Turma 2">Turma 2</option>
-                  <option value="Turma 3">Turma 3</option>
-                  <!-- Add more options here -->
-                </select>
+                <label for="descricaoatividade">Descrição:</label>
+                <input type="text" class="form-control" id="descricaoatividade" name="descricaoatividade" placeholder="Insira o nome">
               </div>
             </div>
+
+            <div class="form-group">
+              <label for="idturma">Turma:</label>
+              <select class="form-control" id="idturma" name="idturma" required>
+                  <option value="">Selecione uma turma</option>
+                  @foreach($turmas as $turma)
+                      <option value="{{ $turma->turma_id }}">{{ $turma->turma_nome }}</option>
+                  @endforeach
+              </select>
+          </div>
+            
           </div>
           <div class="row">
             <div class="col-md-12">

@@ -29,7 +29,7 @@
     <form action="{{route('atualizar.curso')}}" method="POST">
         @method('PUT')
         @csrf
-        <input type="hidden" name="curso_id" value="{{ $cursos->curso_id }}">
+        <input type="hidden" name="curso_id" value="{{$cursos->curso_id }}"> 
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

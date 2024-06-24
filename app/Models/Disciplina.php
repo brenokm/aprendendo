@@ -17,8 +17,11 @@ class Disciplina extends Model
     'disciplina_nome',
    'disciplina_carga_horaria'];
 
-   
-   
+     public function professores(){
+        return $this->hasMany(Professor::class, 'professor_disciplina','professor_disciplina');
+     }
 
-   
+     public function alunosDisciplinas(){
+        return $this->hasMany(Aluno_Disciplina::class, 'disciplina_id','disciplina_id');
+     }
 }

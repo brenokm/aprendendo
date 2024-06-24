@@ -34,25 +34,25 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="btn-group btn-group-lg justify-content-center">
-                    <a href="{{route('CadastroTurma')}}" class="btn btn-primary" title="Cadastro de Turma">
+                    <a href="{{route('cadastro.turma')}}" class="btn btn-primary" title="Cadastro de Turma">
                         <i class="fas fa-users"></i> Cadastar Turma
                     </a>
-                    <a href="{{route('CadastroAtividade')}}" class="btn btn-primary" title="Cadastro de Atividade">
+                    <a href="{{route('cadastro.atividade')}}" class="btn btn-primary" title="Cadastro de Atividade">
                         <i class="fas fa-clipboard-list"></i>Cadastar Atividade
                     </a>
-                    <a href="{{route('CadastroAluno')}}" class="btn btn-primary" title="Cadastro de Aluno">
+                    <a href="{{route('cadastro.aluno')}}" class="btn btn-primary" title="Cadastro de Aluno">
                         <i class="fas fa-user-graduate"></i>Cadastar Aluno
                     </a>
-                    <a href="{{route('CadastroCurso')}}" class="btn btn-primary" title="Cadastro de Aluno">
+                    <a href="{{route('cadastro.curso')}}" class="btn btn-primary" title="Cadastro de Aluno">
                         <i class="fas fa-user-graduate"></i>Cadastar Cursos
                     </a>
-                    <a href="{{route('CadastroSala')}}" class="btn btn-primary" title="Cadastro de Sala">
+                    <a href="{{route('cadastro.sala')}}" class="btn btn-primary" title="Cadastro de Sala">
                         <i class="fas fa-door-open"></i>Cadastar Sala
                     </a>
-                    <a href="{{route('CadastroDisciplina')}}" class="btn btn-primary" title="Cadastro de Disciplina">
+                    <a href="{{route('cadastro.disciplina')}}" class="btn btn-primary" title="Cadastro de Disciplina">
                         <i class="fas fa-door-open"></i>Cadastar Disciplina
                     </a>
-                    <a href="{{route('CadastroProfessor')}}" class="btn btn-primary" title="Cadastro de Professor">
+                    <a href="{{route('cadastro.professor')}}" class="btn btn-primary" title="Cadastro de Professor">
                         <i class="fas fa-door-open"></i>Cadastar Professor
                     </a>
                 </div>
